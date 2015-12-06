@@ -41,12 +41,8 @@
     
       <li><a href="/archives">归档</a></li>
     
-      <li><a href="/about">关于</a></li>
-    
-      <li><a href="/tools">工具</a></li>
-    
 	<li> <a href="/atom.xml">RSS</a> </li>
-<li> <a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function() {
+<li class="hidden"> <a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function() {
 	function c() {
 		var e = document.createElement("link");
 		e.setAttribute("type", "text/css");
@@ -55,14 +51,14 @@
 		e.setAttribute("class", l);
 		document.body.appendChild(e)
 	}
- 
+
 	function h() {
 		var e = document.getElementsByClassName(l);
 		for (var t = 0; t < e.length; t++) {
 			document.body.removeChild(e[t])
 		}
 	}
- 
+
 	function p() {
 		var e = document.createElement("div");
 		e.setAttribute("class", a);
@@ -71,19 +67,19 @@
 			document.body.removeChild(e)
 		}, 100)
 	}
- 
+
 	function d(e) {
 		return {
 			height : e.offsetHeight,
 			width : e.offsetWidth
 		}
 	}
- 
+
 	function v(i) {
 		var s = d(i);
 		return s.height > e && s.height < n && s.width > t && s.width < r
 	}
- 
+
 	function m(e) {
 		var t = e;
 		var n = 0;
@@ -93,7 +89,7 @@
 		}
 		return n
 	}
- 
+
 	function g() {
 		var e = document.documentElement;
 		if (!!window.innerWidth) {
@@ -103,19 +99,19 @@
 		}
 		return 0
 	}
- 
+
 	function y() {
 		if (window.pageYOffset) {
 			return window.pageYOffset
 		}
 		return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
 	}
- 
+
 	function E(e) {
 		var t = m(e);
 		return t >= w && t <= b + w
 	}
- 
+
 	function S() {
 		var e = document.createElement("audio");
 		e.setAttribute("class", l);
@@ -141,15 +137,15 @@
 		document.body.appendChild(e);
 		e.play()
 	}
- 
+
 	function x(e) {
 		e.className += " " + s + " " + o
 	}
- 
+
 	function T(e) {
 		e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
 	}
- 
+
 	function N() {
 		var e = document.getElementsByClassName(s);
 		var t = new RegExp("\\b" + s + "\\b");
@@ -157,7 +153,7 @@
 			e[n].className = e[n].className.replace(t, "")
 		}
 	}
- 
+
 	var e = 30;
 	var t = 30;
 	var n = 350;
@@ -200,7 +196,8 @@
   </ul>
   <div class="clearfix"></div>
 </nav>
-<div class="clearfix"></div></header>
+<div class="clearfix"></div>
+</header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
 <h2 class="archive-title category">Hexo</h2>
@@ -271,7 +268,7 @@
     <div class="clearfix"></div>
   </div>
   <footer id="footer" class="inner"><section>
-Theme of <a href="https://github.com/clude/hexo-light-hippo">Hippo</a>, Improved from <a href="https://github.com/hexojs/hexo-theme-light">Light</a>, by <a href="/">clude</a>
+Theme of <a href="https://github.com/clude/hexo-light-hippo">Hippo</a>, Improved from <a href="https://github.com/hexojs/hexo-theme-light">Light</a> and <a href="https://github.com/zippera/lightum">Lightum</a>, by <a href="/">clude</a>
 </section>
 <div class="clearfix"></div>
 </footer>
