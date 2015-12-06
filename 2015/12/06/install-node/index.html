@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello, Hexo | Clude&#39;s Small World</title>
+  <title>安装Node.js (Centos) | Clude&#39;s Small World</title>
   <meta name="author" content="Clude">
   
   <meta name="description" content="态度决定一切">
@@ -13,7 +13,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Hello, Hexo"/>
+  <meta property="og:title" content="安装Node.js (Centos)"/>
   <meta property="og:site_name" content="Clude&#39;s Small World"/>
 
   
@@ -220,27 +220,38 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2015-12-06T05:54:11.000Z"><a href="/2015/12/06/hello-world/">2015-12-06</a></time>
+        <time datetime="2015-12-06T03:18:43.000Z"><a href="/2015/12/06/install-node/">2015-12-06</a></time>
       
       
   
-    <h1 class="title">Hello, Hexo</h1>
+    <h1 class="title">安装Node.js (Centos)</h1>
   
 
     </header>
     <div class="entry">
       
-        <h3 id="引子">引子</h3><p>一直没动力搭建自己的个人网站，趁项目有点空，本来想找个基于Golang版本的开源blog框架的，正好也让自己练练手研究研究Go语言，但意外发现了Hexo这好东西，自己又熟悉Node.js，那就开工搭一个了。</p>
-<p>以下内容，有Hexo自动生成，略作修改以记录hexo命令</p>
-<p><a href="http://hexo.io/" target="_blank" rel="external">Hexo官网</a><br><a href="http://hexo.io/docs/" target="_blank" rel="external">Hexo文档</a><br><a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">Hexo答疑</a><br><a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">Hexo GitHub</a></p>
-<h2 id="快速教程">快速教程</h2><h3 id="新建文章">新建文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>更多参考: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="运行服务器，默认是4000端口">运行服务器，默认是4000端口</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>更多参考: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="生成静态html页面">生成静态html页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>更多参考: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="部署到远程服务器（git)">部署到远程服务器（git)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>更多参考: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>Centos上Node.js标准的方法参考<a href="https://nodejs.org" target="_blank" rel="external">官网</a>就可以了，官网提供了两个安装方法</p>
+<ul>
+<li>源代码编译安装：通过<a href="https://nodejs.org/en/download/" target="_blank" rel="external">官网下载页面</a>下载指定Linux Binaries，编译安装</li>
+<li>通过yum安装，可参考<a href="https://nodejs.org/en/download/package-manager/#enterprise-linux-and-fedora" target="_blank" rel="external">官网链接</a></li>
+</ul>
+<h3 id="个人建议通过nvm安装Node-js">个人建议通过nvm安装Node.js</h3><p>nvm这货是啥？简单点理解nvm就是Node.js的版本管理工具，现在Node的版本升级很快，通过nvm可以快速安装和切换指定版本的Node</p>
+<ul>
+<li>通过curl或wget获取nvm安装脚本，下面curl或wget择一即可<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">29.0</span>/install.sh | bash</span><br><span class="line">wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">29.0</span>/install.sh | bash</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><sub>运行完后会将nvm相关内容复制到 <code>~/.nvm</code> ，并添加命令行nvm到 (<code>~/.bash_profile</code>, <code>~/.zshrc</code> 或 <code>~/.profile</code>)</sub></p>
+<ul>
+<li>关闭Ternimal再次登录，保证terminal含nvm命令</li>
+<li><p>通过nvm安装指定版本Node,这里以安装4.0版本为例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install <span class="number">4.0</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>指定所有ternimal都用4.0.0版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use <span class="number">4.0</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>试试命令”node -v” 和 “npm -v”是否都有结果了</p>
+</li>
+</ul>
 
       
     </div>
@@ -249,13 +260,13 @@
         
   
   <div class="categories">
-    <a href="/categories/Hexo/">Hexo</a>
+    <a href="/categories/环境安装/">环境安装</a>
   </div>
 
         
   
   <div class="tags">
-    <a href="/tags/hexo/">hexo</a>
+    <a href="/tags/Node/">Node</a>, <a href="/tags/安装/">安装</a>
   </div>
 
 <!-- Baidu Button BEGIN -->
@@ -271,8 +282,8 @@
 
  <nav id="pagination" >
     
+    <a href="/2015/12/06/setup-centos/" class="alignleft prev" >上一页</a>
     
-    <a href="/2015/12/06/install-nginx/" class="alignright next" >下一页</a>
     
     <div class="clearfix"></div>
 </nav>

@@ -1,55 +1,236 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Clude's Small World]]></title>
-  <subtitle><![CDATA[Attitude is everything]]></subtitle>
-  <link href="/atom.xml" rel="self"/>
-  <link href="http://www.robotgogo.com/"/>
-  <updated>2015-12-06T05:54:11.000Z</updated>
-  <id>http://www.robotgogo.com/</id>
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
   
-  <author>
-    <name><![CDATA[Clude]]></name>
-    
-  </author>
+  <title>安装Nginx (Centos) | Clude&#39;s Small World</title>
+  <meta name="author" content="Clude">
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <meta name="description" content="态度决定一切">
   
-  <entry>
-    <title><![CDATA[Hello, Hexo]]></title>
-    <link href="http://www.robotgogo.com/2015/12/06/hello-world/"/>
-    <id>http://www.robotgogo.com/2015/12/06/hello-world/</id>
-    <published>2015-12-06T05:54:11.000Z</published>
-    <updated>2015-12-06T05:54:11.000Z</updated>
-    <content type="html"><![CDATA[<h3 id="引子">引子</h3><p>一直没动力搭建自己的个人网站，趁项目有点空，本来想找个基于Golang版本的开源blog框架的，正好也让自己练练手研究研究Go语言，但意外发现了Hexo这好东西，自己又熟悉Node.js，那就开工搭一个了。</p>
-<p>以下内容，有Hexo自动生成，略作修改以记录hexo命令</p>
-<p><a href="http://hexo.io/" target="_blank" rel="external">Hexo官网</a><br><a href="http://hexo.io/docs/" target="_blank" rel="external">Hexo文档</a><br><a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">Hexo答疑</a><br><a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">Hexo GitHub</a></p>
-<h2 id="快速教程">快速教程</h2><h3 id="新建文章">新建文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>更多参考: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="运行服务器，默认是4000端口">运行服务器，默认是4000端口</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>更多参考: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="生成静态html页面">生成静态html页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>更多参考: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="部署到远程服务器（git)">部署到远程服务器（git)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>更多参考: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="引子">引子</h3><p>一直没动力搭建自己的个人网站，趁项目有点空，本来想找个基于Golang版本的开源blog框架的，正好也让自己练练手研究研究Go语言，但意外发现了Hexo这好东西，自己又熟悉Node.js，那就开工搭一个了。</p>
-<p>以下内容，有H]]>
-    </summary>
-    
-      <category term="hexo" scheme="http://www.robotgogo.com/tags/hexo/"/>
-    
-      <category term="Hexo" scheme="http://www.robotgogo.com/categories/Hexo/"/>
-    
-  </entry>
   
-  <entry>
-    <title><![CDATA[安装Nginx (Centos)]]></title>
-    <link href="http://www.robotgogo.com/2015/12/06/install-nginx/"/>
-    <id>http://www.robotgogo.com/2015/12/06/install-nginx/</id>
-    <published>2015-12-06T04:45:26.000Z</published>
-    <updated>2015-12-06T05:58:43.000Z</updated>
-    <content type="html"><![CDATA[<p>Centos上安装Nginx最简单的方法自然是配置安装源后通过yum安装,可参考<a href="http://nginx.org/en/linux_packages.html#stable" target="_blank" rel="external">官网安装页面</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx -y</span><br></pre></td></tr></table></figure></p>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="安装Nginx (Centos)"/>
+  <meta property="og:site_name" content="Clude&#39;s Small World"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.ico" rel="icon" type="image/x-ico">
+  <link rel="alternate" href="http://wwww.robotgogo.com/atom.xml" title="Clude&#39;s Small World" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <script src="//libs.baidu.com/jquery/1.8.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+  <header id="header" class="inner">
+<div class="alignleft">
+  <h1><a href="/">Clude&#39;s Small World</a></h1>
+  <h2><a href="/">Attitude is everything</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">归档</a></li>
+    
+      <li><a href="/about">关于</a></li>
+    
+      <li><a href="/tools">工具</a></li>
+    
+	<li> <a href="/atom.xml">RSS</a> </li>
+<li> <a title="把这个链接拖到你的Chrome收藏夹工具栏中" href='javascript:(function() {
+	function c() {
+		var e = document.createElement("link");
+		e.setAttribute("type", "text/css");
+		e.setAttribute("rel", "stylesheet");
+		e.setAttribute("href", f);
+		e.setAttribute("class", l);
+		document.body.appendChild(e)
+	}
+ 
+	function h() {
+		var e = document.getElementsByClassName(l);
+		for (var t = 0; t < e.length; t++) {
+			document.body.removeChild(e[t])
+		}
+	}
+ 
+	function p() {
+		var e = document.createElement("div");
+		e.setAttribute("class", a);
+		document.body.appendChild(e);
+		setTimeout(function() {
+			document.body.removeChild(e)
+		}, 100)
+	}
+ 
+	function d(e) {
+		return {
+			height : e.offsetHeight,
+			width : e.offsetWidth
+		}
+	}
+ 
+	function v(i) {
+		var s = d(i);
+		return s.height > e && s.height < n && s.width > t && s.width < r
+	}
+ 
+	function m(e) {
+		var t = e;
+		var n = 0;
+		while (!!t) {
+			n += t.offsetTop;
+			t = t.offsetParent
+		}
+		return n
+	}
+ 
+	function g() {
+		var e = document.documentElement;
+		if (!!window.innerWidth) {
+			return window.innerHeight
+		} else if (e && !isNaN(e.clientHeight)) {
+			return e.clientHeight
+		}
+		return 0
+	}
+ 
+	function y() {
+		if (window.pageYOffset) {
+			return window.pageYOffset
+		}
+		return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+	}
+ 
+	function E(e) {
+		var t = m(e);
+		return t >= w && t <= b + w
+	}
+ 
+	function S() {
+		var e = document.createElement("audio");
+		e.setAttribute("class", l);
+		e.src = i;
+		e.loop = false;
+		e.addEventListener("canplay", function() {
+			setTimeout(function() {
+				x(k)
+			}, 500);
+			setTimeout(function() {
+				N();
+				p();
+				for (var e = 0; e < O.length; e++) {
+					T(O[e])
+				}
+			}, 15500)
+		}, true);
+		e.addEventListener("ended", function() {
+			N();
+			h()
+		}, true);
+		e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+		document.body.appendChild(e);
+		e.play()
+	}
+ 
+	function x(e) {
+		e.className += " " + s + " " + o
+	}
+ 
+	function T(e) {
+		e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+	}
+ 
+	function N() {
+		var e = document.getElementsByClassName(s);
+		var t = new RegExp("\\b" + s + "\\b");
+		for (var n = 0; n < e.length; ) {
+			e[n].className = e[n].className.replace(t, "")
+		}
+	}
+ 
+	var e = 30;
+	var t = 30;
+	var n = 350;
+	var r = 350;
+	var i = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake.mp3";
+	var s = "mw-harlem_shake_me";
+	var o = "im_first";
+	var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+	var a = "mw-strobe_light";
+	var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+	var l = "mw_added_css";
+	var b = g();
+	var w = y();
+	var C = document.getElementsByTagName("*");
+	var k = null;
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			if (E(A)) {
+				k = A;
+				break
+			}
+		}
+	}
+	if (A === null) {
+		console.warn("Could not find a node of the right size. Please try a different page.");
+		return
+	}
+	c();
+	S();
+	var O = [];
+	for (var L = 0; L < C.length; L++) {
+		var A = C[L];
+		if (v(A)) {
+			O.push(A)
+		}
+	}
+})()    '>High一下</a> </li>
+
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-12-06T04:45:26.000Z"><a href="/2015/12/06/install-nginx/">2015-12-06</a></time>
+      
+      
+  
+    <h1 class="title">安装Nginx (Centos)</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>Centos上安装Nginx最简单的方法自然是配置安装源后通过yum安装,可参考<a href="http://nginx.org/en/linux_packages.html#stable" target="_blank" rel="external">官网安装页面</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx -y</span><br></pre></td></tr></table></figure></p>
 <p>但个人比较建议通过源代码安装，可配置性高，而且可以添加一些第三方的nginx module</p>
 <h3 id="源码安装Nginx,_支持SSL">源码安装Nginx, 支持SSL</h3><ul>
 <li><p>通过<a href="http://nginx.org/en/download.html" target="_blank" rel="external">官方下载页面</a>下载源码包，这里下载stable版本的<a href="http://nginx.org/download/nginx-1.8.0.tar.gz" target="_blank" rel="external">nginx-1.8.0</a></p>
@@ -93,114 +274,171 @@
 </li>
 </ul>
 <p>附件： nginx启动脚本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># nginx - this script starts and stops the nginx daemon</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># chkconfig: - 85 15</span></span><br><span class="line"><span class="comment"># description: Nginx is an HTTP(S) server, HTTP(S) reverse</span></span><br><span class="line"><span class="comment"># proxy and IMAP/POP3 proxy server</span></span><br><span class="line"><span class="comment"># processname: nginx</span></span><br><span class="line"><span class="comment"># chkconfig: 2345 90 91</span></span><br><span class="line"><span class="comment"># description: nginx web server</span></span><br><span class="line"><span class="comment"># processname: nginx</span></span><br><span class="line"><span class="comment"># config: /opt/nginx/conf/nginx.conf</span></span><br><span class="line"><span class="comment"># pidfile: /opt/nginx/nginx.pid</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Source function library.</span></span><br><span class="line">. /etc/init.d/<span class="built_in">functions</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Source networking configuration.</span></span><br><span class="line">. /etc/sysconfig/network</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="operator">-f</span> /etc/sysconfig/nginx ];<span class="keyword">then</span></span><br><span class="line">. /etc/sysconfig/nginx</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Check that networking is up.</span></span><br><span class="line">[ <span class="string">"<span class="variable">$NETWORKING</span>"</span> = <span class="string">"no"</span> ] &amp;&amp; <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">nginx=<span class="string">"/opt/nginx/sbin/nginx"</span></span><br><span class="line">prog=$(basename <span class="variable">$nginx</span>)</span><br><span class="line"></span><br><span class="line">NGINX_CONF_FILE=<span class="string">"/opt/nginx/conf/nginx.conf"</span></span><br><span class="line"></span><br><span class="line">[ <span class="operator">-f</span> /etc/sysconfig/nginx ] &amp;&amp; . /etc/sysconfig/nginx</span><br><span class="line"></span><br><span class="line">lockfile=/var/lock/subsys/nginx</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">start</span></span>() &#123;</span><br><span class="line">[ -x <span class="variable">$nginx</span> ] || <span class="built_in">exit</span> <span class="number">5</span></span><br><span class="line">[ <span class="operator">-f</span> <span class="variable">$NGINX_CONF_FILE</span> ] || <span class="built_in">exit</span> <span class="number">6</span></span><br><span class="line"><span class="built_in">echo</span> -n $<span class="string">"Starting <span class="variable">$prog</span>: "</span></span><br><span class="line">daemon <span class="variable">$nginx</span> <span class="comment">#-c $NGINX_CONF_FILE</span></span><br><span class="line">retval=$?</span><br><span class="line"><span class="built_in">echo</span></span><br><span class="line">[ <span class="variable">$retval</span> <span class="operator">-eq</span> <span class="number">0</span> ] &amp;&amp; touch <span class="variable">$lockfile</span></span><br><span class="line"><span class="built_in">return</span> <span class="variable">$retval</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">stop</span></span>() &#123;</span><br><span class="line"><span class="built_in">echo</span> -n $<span class="string">"Stopping <span class="variable">$prog</span>: "</span></span><br><span class="line">killproc <span class="variable">$prog</span> -QUIT</span><br><span class="line">retval=$?</span><br><span class="line"><span class="built_in">echo</span></span><br><span class="line">[ <span class="variable">$retval</span> <span class="operator">-eq</span> <span class="number">0</span> ] &amp;&amp; rm <span class="operator">-f</span> <span class="variable">$lockfile</span></span><br><span class="line"><span class="built_in">return</span> <span class="variable">$retval</span></span><br><span class="line">killall -<span class="number">9</span> nginx</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">restart</span></span>() &#123;</span><br><span class="line">configtest || <span class="built_in">return</span> $?</span><br><span class="line">stop</span><br><span class="line">sleep <span class="number">1</span></span><br><span class="line">start</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">reload</span></span>() &#123;</span><br><span class="line">configtest || <span class="built_in">return</span> $?</span><br><span class="line"><span class="built_in">echo</span> -n $<span class="string">"Reloading <span class="variable">$prog</span>: "</span></span><br><span class="line">killproc <span class="variable">$nginx</span> -HUP</span><br><span class="line">RETVAL=$?</span><br><span class="line"><span class="built_in">echo</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">force_reload</span></span>() &#123;</span><br><span class="line">restart</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">configtest</span></span>() &#123;</span><br><span class="line"><span class="variable">$nginx</span> -t <span class="comment">#-c $NGINX_CONF_FILE</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">rh_status</span></span>() &#123;</span><br><span class="line">status <span class="variable">$prog</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">rh_status_q</span></span>() &#123;</span><br><span class="line">rh_status &gt;/dev/null <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line">start)</span><br><span class="line">	rh_status_q &amp;&amp; <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line">	<span class="variable">$1</span></span><br><span class="line">	;;</span><br><span class="line">stop)</span><br><span class="line">rh_status_q || <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line">	<span class="variable">$1</span></span><br><span class="line">	;;</span><br><span class="line">restart)</span><br><span class="line">	<span class="variable">$1</span></span><br><span class="line">	;;</span><br><span class="line"><span class="built_in">test</span>)</span><br><span class="line">	configtest</span><br><span class="line">	;;</span><br><span class="line">reload)</span><br><span class="line">	rh_status_q || <span class="built_in">exit</span> <span class="number">7</span></span><br><span class="line">	<span class="variable">$1</span></span><br><span class="line">	;;</span><br><span class="line">force-reload)</span><br><span class="line">	force_reload</span><br><span class="line">	;;</span><br><span class="line">status)</span><br><span class="line">	rh_status</span><br><span class="line">	;;</span><br><span class="line">condrestart|try-restart)</span><br><span class="line">	rh_status_q || <span class="built_in">exit</span> <span class="number">0</span></span><br><span class="line">	;;</span><br><span class="line">*)</span><br><span class="line"><span class="built_in">echo</span> $<span class="string">"Usage: <span class="variable">$0</span> &#123;start|stop|status|restart|condrestart|try-restart|reload|force-reload|test&#125;"</span></span><br><span class="line"><span class="built_in">exit</span> <span class="number">2</span></span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Centos上安装Nginx最简单的方法自然是配置安装源后通过yum安装,可参考<a href="http://nginx.org/en/linux_packages.html#stable">官网安装页面</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx -y</span><br></pre></td></tr></table></figure></p>
-<p>但个人比较建议通过源代码安装，可配置性高，而且可以添加一些第三方的nginx module</p>
-<h3 id="源码安装Nginx,_支持SSL">源码安装Nginx, 支持SSL</h3><ul>
-<li><p>通过<a href="http://nginx.org/en/download.html">官方下载页面</a>下载源码包，这里下载stable版本的<a href="http://nginx.org/download/nginx-1.8.0.tar.gz">nginx-1.8.0</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://nginx.org/download/nginx-<span class="number">1.8</span>.<span class="number">0</span>.tar.gz</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>解压</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xf nginx-<span class="number">1.8</span>.<span class="number">0</span>.tar.gz</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装依赖的源（支持SSL等）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install pcre-devel openssl openssl-devel</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置安装路径和需要的包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/opt/nginx --with-http_ssl_module --with-http_gzip_static_module --with-http_stub_status_module --with-cc-opt=-Wno-error</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><sub>“–prefix=/opt/nginx”参数不加的话，将默认安装到”/usr/local/nginx”</sub></p>
-<ul>
-<li><p>安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动和停止nginx</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/nginx/sbin/nginx <span class="operator">-s</span> reload|reopen|stop|quit</span><br></pre></td></tr></table></figure>
-</li>
-</ul>]]>
-    
-    </summary>
-    
-      <category term="Centos" scheme="http://www.robotgogo.com/tags/Centos/"/>
-    
-      <category term="Nginx" scheme="http://www.robotgogo.com/tags/Nginx/"/>
-    
-      <category term="环境安装" scheme="http://www.robotgogo.com/categories/%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/"/>
-    
-  </entry>
+
+      
+    </div>
+    <footer>
+      
+        
   
-  <entry>
-    <title><![CDATA[Centos 初始化的一些事]]></title>
-    <link href="http://www.robotgogo.com/2015/12/06/setup-centos/"/>
-    <id>http://www.robotgogo.com/2015/12/06/setup-centos/</id>
-    <published>2015-12-06T04:15:38.000Z</published>
-    <updated>2015-12-06T04:36:24.000Z</updated>
-    <content type="html"><![CDATA[<p>在Centos上安装各种第三方插件的时候，我们会碰到一些依赖包的安装问题。这里提供几个Centos装好后需要安装的yum包，装完后基本的开发所需要的包应该都有了</p>
-<ul>
-<li>基础开发包<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum groupinstall <span class="string">"development tools"</span> -y         <span class="comment">#安装开发工具组</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<!-- yum groupinstall "development libraries" -y     #安装开发工具包，有时可能不用安装 -->
-<ul>
-<li>可选开发包（有些已在基础开发包里面）<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum -y install openssh-clients gcc automake autoconf libtool make wget vim gcc-c++</span><br><span class="line">yum -y install zlib-devel openssl-devel perl cpio expat-devel gettext-devel</span><br><span class="line">yum -y install git</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>在Centos上安装各种第三方插件的时候，我们会碰到一些依赖包的安装问题。这里提供几个Centos装好后需要安装的yum包，装完后基本的开发所需要的包应该都有了</p>
-<ul>
-<li>基础开发包<figure class="highlight bash"><table>]]>
-    </summary>
-    
-      <category term="Centos" scheme="http://www.robotgogo.com/tags/Centos/"/>
-    
-      <category term="环境安装" scheme="http://www.robotgogo.com/categories/%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/"/>
-    
-  </entry>
+  <div class="categories">
+    <a href="/categories/环境安装/">环境安装</a>
+  </div>
+
+        
   
-  <entry>
-    <title><![CDATA[安装Node.js (Centos)]]></title>
-    <link href="http://www.robotgogo.com/2015/12/06/install-node/"/>
-    <id>http://www.robotgogo.com/2015/12/06/install-node/</id>
-    <published>2015-12-06T03:18:43.000Z</published>
-    <updated>2015-12-06T05:40:11.000Z</updated>
-    <content type="html"><![CDATA[<p>Centos上Node.js标准的方法参考<a href="https://nodejs.org" target="_blank" rel="external">官网</a>就可以了，官网提供了两个安装方法</p>
-<ul>
-<li>源代码编译安装：通过<a href="https://nodejs.org/en/download/" target="_blank" rel="external">官网下载页面</a>下载指定Linux Binaries，编译安装</li>
-<li>通过yum安装，可参考<a href="https://nodejs.org/en/download/package-manager/#enterprise-linux-and-fedora" target="_blank" rel="external">官网链接</a></li>
-</ul>
-<h3 id="个人建议通过nvm安装Node-js">个人建议通过nvm安装Node.js</h3><p>nvm这货是啥？简单点理解nvm就是Node.js的版本管理工具，现在Node的版本升级很快，通过nvm可以快速安装和切换指定版本的Node</p>
-<ul>
-<li>通过curl或wget获取nvm安装脚本，下面curl或wget择一即可<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">29.0</span>/install.sh | bash</span><br><span class="line">wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">29.0</span>/install.sh | bash</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><sub>运行完后会将nvm相关内容复制到 <code>~/.nvm</code> ，并添加命令行nvm到 (<code>~/.bash_profile</code>, <code>~/.zshrc</code> 或 <code>~/.profile</code>)</sub></p>
-<ul>
-<li>关闭Ternimal再次登录，保证terminal含nvm命令</li>
-<li><p>通过nvm安装指定版本Node,这里以安装4.0版本为例</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install <span class="number">4.0</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>指定所有ternimal都用4.0.0版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use <span class="number">4.0</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>试试命令”node -v” 和 “npm -v”是否都有结果了</p>
-</li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Centos上Node.js标准的方法参考<a href="https://nodejs.org" target="_blank" rel="external">官网</a>就可以了，官网提供了两个安装方法</p>
-<ul>
-<li>源代码编译安装：通过<a href="h]]>
-    </summary>
+  <div class="tags">
+    <a href="/tags/Centos/">Centos</a>, <a href="/tags/Nginx/">Nginx</a>
+  </div>
+
+<!-- Baidu Button BEGIN -->
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{},"image":{"viewList":["sqq","weixin","tsina","douban","qzone"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["sqq","weixin","tsina","douban","qzone"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<!-- Baidu Button END -->      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+ <nav id="pagination" >
     
-      <category term="Node" scheme="http://www.robotgogo.com/tags/Node/"/>
+    <a href="/2015/12/06/hello-world/" class="alignleft prev" >上一页</a>
     
-      <category term="安装" scheme="http://www.robotgogo.com/tags/%E5%AE%89%E8%A3%85/"/>
     
-      <category term="环境安装" scheme="http://www.robotgogo.com/categories/%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/"/>
+    <a href="/2015/12/06/setup-centos/" class="alignright next" >下一页</a>
     
-  </entry>
+    <div class="clearfix"></div>
+</nav>
+
+
+
+<section id="comment">
+
+  <!-- 多说评论框 start -->
+  	<div class="ds-thread"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"clude"};
+  	(function() {
+  		var ds = document.createElement('script');
+  		ds.type = 'text/javascript';ds.async = true;
+  		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  		ds.charset = 'UTF-8';
+  		(document.getElementsByTagName('head')[0]
+  		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+  	})();
+  	</script>
+  <!-- 多说公共JS代码 end -->
+
+
+</section>
+
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:www.robotgogo.com">
+  </form>
+</div>
+
   
-</feed>
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Hexo/">Hexo</a><small>1</small></li>
+  
+    <li><a href="/categories/环境安装/">环境安装</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget tag">
+<h3 class="title">简介</h3>
+<div class="avatar">
+  <img src="/images/avatar/marvin.jpg" />
+  <div class="desc">
+    <div class="username">clude</div>
+    <div class="userlong">码农，挨踢，猿，狮</div>
+  </div>
+</div>
+<ul class="entry">
+<li>住址：魔都</li>
+<li>QQ 号：9994596</li>
+</ul>
+</div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/Centos/" style="font-size: 20px;">Centos</a> <a href="/tags/Nginx/" style="font-size: 10px;">Nginx</a> <a href="/tags/Node/" style="font-size: 10px;">Node</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/安装/" style="font-size: 10px;">安装</a>
+  </div>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><section>
+Theme of <a href="https://github.com/clude/hexo-light-hippo">Hippo</a>, Improved from <a href="https://github.com/hexojs/hexo-theme-light">Light</a>, by <a href="/">clude</a>
+</section>
+<div class="clearfix"></div>
+</footer>
+  <script src="//libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</body>
+</html>
+
+
+<a href="https://github.com/clude" target="_blank"><img style="position: absolute; top: 0; left: 0; border: 0;" src="/images/forkme_left_green_007200.png" alt="Fork me on GitHub"></a>
